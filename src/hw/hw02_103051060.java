@@ -10,9 +10,9 @@ public class hw02_103051060 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
+		String input = scn.next();
+		char [] data = input.toCharArray();
 		while(true){
-			String input = scn.next();
-			char [] data = input.toCharArray();
 			for(int i =0; i<data.length ; i++){
 				if (data[i]<32||data[i]>125){
 					System.out.println("Input error!");
@@ -24,10 +24,11 @@ public class hw02_103051060 {
 			}
 			break;
 		}
-		char [] kb = new char [93];
-		KB={" ","@","\"","$","%","&","'",")","_","(","+",".","=","/","/","-","2","3","4","6","7","8","9","0","\"","'",">","=","?","?","#","s","n","v","f","e","g","H","h","o","k","l",";",",","m","p","[","w","t","d","t","i","b","e","c","z","x","]","\\"},"\\","&","+","1","b","n","v","f","r","g","h","j","o","k","l",";",",","m","p","[","w","t","d","y","i","b","e","c","u","x"};
-//		kb={" ","@","\"","$","%","&","'",")","_","(","+",".","=","/","/","-","2","3","4","5","6","7","8","9","0","\"","'",">","=","?"}
-		
+		String[] kb={" ","@","\"","$","%","&","'",")","_","(","+",".","=","/","/","-","2","3","4","5","6","7","8","9","0","\"","'",">","=","?","?","#","s","n","v","f","e","g","H","h","o","k","l",";",",","m","p","[","w","t","d","t","i","b","e","c","z","x","]","\\","\\","&","+","1","s","n","v","f","r","g","h","j","o","k","l",";",",","m","p","[","w","t","d","y","i","b","e","c","u","x"};
+		for(int i =0 ; i<data.length ; i++){
+			int ascll = (int)data[i]-33;
+			System.out.print(kb[ascll]);
+		}		
 	}
 
 }
