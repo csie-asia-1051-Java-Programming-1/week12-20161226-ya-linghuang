@@ -4,11 +4,30 @@ package hw;
 * Date: 2016/12/26
 * Author: 103051060 黃雅鈴
 */
+import java.util.Scanner;
 public class hw02_103051060 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Scanner scn = new Scanner(System.in);
+		while(true){
+			String input = scn.next();
+			char [] data = input.toCharArray();
+			for(int i =0; i<data.length ; i++){
+				if (data[i]<32||data[i]>125){
+					System.out.println("Input error!");
+					continue;
+				}
+				if(data[i]>='A'&&data[i]<='Z'){
+					data[i]+=32;
+				}
+			}
+			break;
+		}
+		char [][] kb = new char[4][14];
+		kb={{'`','1','2','3','4','5','6','7','8','9','0','-','=',' '},
+				{'q','w','e','r','t','y','u','i','o','p','[',']','\'},
+		
 	}
 
 }
