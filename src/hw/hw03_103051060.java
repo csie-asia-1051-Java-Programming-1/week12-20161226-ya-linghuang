@@ -4,11 +4,30 @@ package hw;
 * Date: 2016/12/26
 * Author: 103051060 黃雅鈴
 */
+import java.util.Scanner;
 public class hw03_103051060 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+	Scanner scn = new Scanner(System.in);
+		String In = scn.nextLine();
+		String[] st = In.split(" ");
+		for(int i = 0 ; i<st.length ; i++){
+			st[i]=st[i].toLowerCase();
+		}
+		for(int i = 0 ; i<st.length ; i++){
+			for(int j = 0 ; j<st.length ; j++){
+				if(i==j){continue;}
+				if(st[i].equals(st[j])){
+					st[j]="";
+				}
+			}
+			if(st[i]==""){
+				continue;
+			}
+			System.out.print(st[i]+" ");
+		}
+		System.out.print("\n");
 	}
 
 }
